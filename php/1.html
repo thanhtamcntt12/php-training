@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="js/jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $("#showpass").click(function () {
+        $("#pass").attr('type', 'text');
+        $("#showpass").hide();
+        $("#hidepass").show();
+      });
+      $("#hidepass").click(function () {
+        $("#pass").attr('type', 'password');
+        $("#showpass").show();
+        $("#hidepass").hide();
+      });
+    })
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- <input type="password" value="" id="myInput">
+    <button type="button" class="btn btn-primary" onclick="myFunction()">Hiện</button>
+    <button type="button" class="btn btn-danger" onclick="myFunction()">Ẩn</button> -->
+    <input type="password" placeholder="DOB" id="pass" name="dob" />
+    <button id="showpass">Hiện</button>
+    <button id="hidepass" style="display: none;">Ẩn</button>
+  </div>
+
+
+</body>
+</html>
