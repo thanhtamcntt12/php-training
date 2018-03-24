@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quảng cáo</title>
+  <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <style type="text/css">
+    #mainqc{
+      position: fixed;
+      bottom: 1px;
+      right: 1px;
+      width: 600px;
+      height: 350px;
+    }
+    #moqc{
+      display: none;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("#tatqc").click(function(){
+        $(this).hide();
+        $("#picqc").hide();
+        $("#moqc").show();
+      });
+    });
+    $(document).ready(function(){
+      $("#moqc").click(function(){
+        $(this).hide();
+        $("#picqc").show();
+        $("#tatqc").show();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="mainqc" class="w3-bar-block">
+    <a href="javascript:void(0)" id="tatqc" class="w3-bar-item w3-button w3-teal">Tắt quảng cáo</a>
+    <a href="http://dothanhspyb.com" target="_blank">
+      <img src="image/h1.jpg" alt="" id="picqc">
+    </a>
+    <a href="javascript:void(0)" id="moqc" class="w3-bar-item w3-button w3-teal">Mở quảng cáo</a>
+  </div>
+</body>
+</html>
