@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    div{
+      float: left;
+      width: 300px;
+      border: 1px solid #ccc;
+      height: 300px;
+      background: #ccc;
+    }
+    ul{
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      width: 100%;
+    }
+    li{
+      float: left;
+      padding: 10px;
+      background: #ccc;
+    }
+    .main{
+      clear: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="all">
+    <ul>
+      <li class="btnregister">Đăng kí</li>
+      <li class="btnlogin">Đăng nhập</li>
+    </ul>
+    <div class="main">
+      <div class="register">
+        <h1>Form đăng kí</h1>
+      </div>
+      <div class="login" style="display: none;">
+        <h1>Form Đăng nhập</h1>
+      </div>
+    </div>
+  </div>
+<script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+      $(".btnregister").click(function(){
+        $('.register').slideUp();
+        $('.login').slideDown();
+        $(this).css('background', 'red');
+        $('.btnlogin').css('background', '#ccc');
+      });
+      $(".btnlogin").click(function(){
+        $('.register').slideDown();
+        $('.login').slideUp();
+        $(this).css('background', 'red');
+        $('.btnregister').css('background', '#ccc');
+      });
+    });
+</script>
+</body>
+</html>

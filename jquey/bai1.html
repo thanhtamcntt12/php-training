@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <p>This is Tag P1</p>
+  <p>This is Tag P2</p>
+  <p>This is Tag P3</p>
+  <p>This is Tag P4</p>
+  <p>This is Tag P5</p>
+  <p>This is Tag P6</p>
+  <input name="name" value="Text Attribute 1">
+  <input name="email" value="Text Attribute 2">
+  <script src="js/jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('p:eq(3)').css('color', 'red');
+      $('input[name="name"]').css('color', 'red');
+    })
+  </script>
+</body>
+</html>
