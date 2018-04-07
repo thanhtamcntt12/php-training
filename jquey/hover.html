@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+<meta charset="utf-8">
+<title>Tiêu đề</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function(){
+    $('p').hover(function(){
+        $(this).css('color','red');
+    },function(){
+        $(this).css('color','black');
+});
+});
+</script>
 </head>
-<body>
-  <script src="js/jquery.js"></script>
-  <script>
-    $(document).ready(function(){
 
-    }
-  </script>
+<body>
+<p>Thành phần p</p>
 </body>
 </html>
